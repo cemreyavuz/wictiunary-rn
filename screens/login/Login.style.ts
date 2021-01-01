@@ -6,4 +6,8 @@ export default (colorScheme: ColorSchemeName) =>
     container: {
       height: "100%",
     },
+    inputContainer: {
+      marginHorizontal: 24,
+      marginTop: 24,
+    },
   });
