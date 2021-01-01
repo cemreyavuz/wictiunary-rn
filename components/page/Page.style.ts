@@ -23,7 +23,7 @@ export default (colorScheme: ColorSchemeName) => {
       paddingHorizontal: 24,
     },
     headerText: {
-      color: themedColors.themedTextColor,
+      color: themedColors.themedTextColorPrimary,
       fontSize: 20,
       fontWeight: "bold",
     },
