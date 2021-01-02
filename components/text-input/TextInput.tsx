@@ -28,7 +28,7 @@ const TextInput = (props: TextInputProps) => {
       <RNTextInput
         onChangeText={setText}
         // TODO: add default color scheme
-        selectionColor={colors[colorScheme ?? "light"].themedBackground}
+        selectionColor={colors[colorScheme ?? "light"].themedBackgroundPrimary}
         style={styles.input}
         value={text}
         {...textInputProps}

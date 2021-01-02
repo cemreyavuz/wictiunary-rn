@@ -9,14 +9,14 @@ export default (colorScheme: ColorSchemeName) => {
       flex: 1,
     },
     containerStatusBarFilled: {
-      backgroundColor: themedColors.themedBackground,
+      backgroundColor: themedColors.themedBackgroundPrimary,
     },
     content: {
       backgroundColor: themedColors.lightBackground,
       flex: 1,
     },
     header: {
-      backgroundColor: themedColors.themedBackground,
+      backgroundColor: themedColors.themedBackgroundPrimary,
       display: "flex",
       justifyContent: "center",
       height: 50,

@@ -27,6 +27,12 @@ const darkGray3 = "#293742";
 const darkGray4 = "#30404D";
 const darkGray5 = "#394B59";
 
+const vermilion1 = "#FCB19C";
+const vermilion2 = "#FB9274";
+const vermilion3 = "#F96E46";
+const vermilion4 = "#F85325";
+const vermilion5 = "#ED3907";
+
 export default {
   light: {
     text: "#000",
@@ -36,11 +42,13 @@ export default {
     tint: tintColorLight,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorLight,
-    themedBackground: green4,
+    themedBackgroundPrimary: green4,
+    themedBackgroundSecondary: vermilion2,
     themedTextColorPrimary: white,
     textColorPrimary: darkGray4,
     textColorSecondary: gray4,
     textColorTertiary: lightGray2,
+    textColorInvertedPrimary: white,
   },
   dark: {
     text: "#fff",
@@ -50,10 +58,12 @@ export default {
     tint: tintColorDark,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorDark,
-    themedBackground: green4,
+    themedBackgroundPrimary: green4,
+    themedBackgroundSecondary: vermilion2,
     themedTextColorPrimary: white,
     textColorPrimary: darkGray4,
     textColorSecondary: gray4,
     textColorTertiary: lightGray2,
+    textColorInvertedPrimary: white,
   },
 };

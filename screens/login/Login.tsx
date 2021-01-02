@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Text, View } from "react-native";
+import Button from "../../components/button/Button";
 
 import Page from "../../components/page/Page";
 import TextInput from "../../components/text-input/TextInput";
@@ -46,6 +47,9 @@ const Login = () => {
             textContentType="password"
             value={fields.password}
           />
+        </View>
+        <View style={styles.inputContainer}>
+          <Button text="Login" />
         </View>
       </View>
     </Page>
