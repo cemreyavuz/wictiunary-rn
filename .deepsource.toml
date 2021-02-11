@@ -8,3 +8,4 @@ enabled = true
   plugins = ["react"]
   environment = ["nodejs"]
   style_guide = "airbnb"
+  dialect = "typescript"
