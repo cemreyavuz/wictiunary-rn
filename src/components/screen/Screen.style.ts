@@ -1,13 +1,14 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import styled from "styled-components/native";
+
+import styled from "../../common/theme/styled";
 
 export const StyledScreenContainer = styled(SafeAreaView)`
   flex: 1;
-  background-color: blue;
+  background-color: ${({ theme }) => theme.colors.headerBackgroundColor};
 `;
 
 export const StyledScreenHeader = styled.View`
-  background-color: blue;
+  background-color: ${({ theme }) => theme.colors.headerBackgroundColor};
   display: flex;
   justify-content: center;
   height: 50px;
@@ -21,6 +22,6 @@ export const StyledScreenTitle = styled.Text`
 `;
 
 export const StyledScreenContent = styled.ScrollView`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.contentBackgroundColor};
   flex: 1;
 `;
