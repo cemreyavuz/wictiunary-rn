@@ -1,14 +1,14 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { ThemeProvider } from "styled-components";
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ThemeProvider } from 'styled-components';
 
-import useCachedResources from "./hooks/useCachedResources";
-import useColorScheme from "./hooks/useColorScheme";
-import Navigation from "./navigation";
-import { useTheme } from "./src/common/theme/theme";
+import useCachedResources from './hooks/useCachedResources';
+import useColorScheme from './hooks/useColorScheme';
+import Navigation from './navigation';
+import { useTheme } from './src/common/theme/theme';
 
-export const App = (): JSX.Element => {
+const App = (): JSX.Element => {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
@@ -25,3 +25,5 @@ export const App = (): JSX.Element => {
     );
   }
 };
+
+export default App;
