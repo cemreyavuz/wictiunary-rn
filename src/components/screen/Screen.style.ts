@@ -16,7 +16,7 @@ export const StyledScreenHeader = styled.View`
 `;
 
 export const StyledScreenTitle = styled.Text`
-  color: lightblue;
+  color: ${({ theme }) => theme.colors.textColorInvertedPrimary};
   font-size: 20px;
   font-weight: bold;
 `;
