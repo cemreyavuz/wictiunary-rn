@@ -1,8 +1,8 @@
-import { ColorSchemeName, StyleSheet } from "react-native";
-import colors from "../../constants/Colors";
+import { ColorSchemeName, StyleSheet } from 'react-native';
+import colors from '../../constants/Colors';
 
 export default (colorScheme: ColorSchemeName) => {
-  const themedColors = colors[colorScheme ?? "light"];
+  const themedColors = colors[colorScheme ?? 'light'];
 
   return StyleSheet.create({
     container: {
@@ -17,15 +17,15 @@ export default (colorScheme: ColorSchemeName) => {
     },
     header: {
       backgroundColor: themedColors.themedBackgroundPrimary,
-      display: "flex",
-      justifyContent: "center",
+      display: 'flex',
+      justifyContent: 'center',
       height: 50,
       paddingHorizontal: 24,
     },
     headerText: {
       color: themedColors.themedTextColorPrimary,
       fontSize: 20,
-      fontWeight: "bold",
+      fontWeight: 'bold',
     },
   });
 };

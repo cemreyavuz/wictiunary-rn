@@ -1,8 +1,8 @@
-import { ColorSchemeName, StyleSheet } from "react-native";
-import colors from "../../constants/Colors";
+import { ColorSchemeName, StyleSheet } from 'react-native';
+import colors from '../../constants/Colors';
 
 export default (colorScheme: ColorSchemeName) => {
-  const themedColors = colors[colorScheme ?? "light"];
+  const themedColors = colors[colorScheme ?? 'light'];
 
   return StyleSheet.create({
     container: {
@@ -10,22 +10,22 @@ export default (colorScheme: ColorSchemeName) => {
       borderRadius: 4,
       borderWidth: 1,
       height: 64,
-      position: "relative",
+      position: 'relative',
     },
     floatingLabel: {
       color: themedColors.textColorSecondary,
       fontSize: 10,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       left: 12,
       letterSpacing: 0.5,
-      position: "absolute",
-      textTransform: "uppercase",
+      position: 'absolute',
+      textTransform: 'uppercase',
       top: 8,
     },
     input: {
       color: themedColors.textColorPrimary,
       fontSize: 16,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       paddingHorizontal: 12,
       paddingBottom: 12,
       paddingTop: 32,

@@ -1,10 +1,10 @@
-import { ColorSchemeName, StyleSheet } from "react-native";
-import colors from "../../constants/Colors";
+import { ColorSchemeName, StyleSheet } from 'react-native';
+import colors from '../../constants/Colors';
 
 export default (colorScheme: ColorSchemeName) =>
   StyleSheet.create({
     container: {
-      height: "100%",
+      height: '100%',
     },
     inputContainer: {
       marginHorizontal: 24,

@@ -1,5 +1,5 @@
-import * as styledComponents from "styled-components/native";
-import { WictiunaryTheme } from "./theme";
+import * as styledComponents from 'styled-components/native';
+import { WictiunaryTheme } from './theme';
 
 const {
   default: styled,

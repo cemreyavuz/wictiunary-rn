@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Text, View } from "react-native";
-import Button from "../../components/button/Button";
+import React, { useState } from 'react';
+import { Text, View } from 'react-native';
+import Button from '../../components/button/Button';
 
-import Page from "../../components/page/Page";
-import TextInput from "../../components/text-input/TextInput";
-import useColorScheme from "../../hooks/useColorScheme";
-import createStyles from "./Login.style";
+import Page from '../../components/page/Page';
+import TextInput from '../../components/text-input/TextInput';
+import useColorScheme from '../../hooks/useColorScheme';
+import createStyles from './Login.style';
 
 interface LoginFields {
   email: string;
@@ -17,8 +17,8 @@ const Login = () => {
   const styles = createStyles(colorScheme);
 
   const [fields, setFields] = useState<LoginFields>({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
 
   const handleFieldChange = (fieldName: string) => (value: any) => {
@@ -38,7 +38,7 @@ const Login = () => {
         <View style={styles.inputContainer}>
           <TextInput
             label="Email"
-            onChangeText={handleFieldChange("email")}
+            onChangeText={handleFieldChange('email')}
             textContentType="emailAddress"
             value={fields.email}
           />
@@ -46,7 +46,7 @@ const Login = () => {
         <View style={styles.inputContainer}>
           <TextInput
             label="Password"
-            onChangeText={handleFieldChange("password")}
+            onChangeText={handleFieldChange('password')}
             secureTextEntry
             textContentType="password"
             value={fields.password}

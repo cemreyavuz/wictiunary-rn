@@ -1,8 +1,8 @@
-import React from "react";
-import { ScrollView, Text, useColorScheme, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import React from 'react';
+import { ScrollView, Text, useColorScheme, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import createStyles from "./Page.style";
+import createStyles from './Page.style';
 
 interface PageProps {
   children: React.ReactChild;

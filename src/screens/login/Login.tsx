@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Screen from "../../components/screen/Screen";
-import { StyledLoginContainer, StyledLoginInputContainer } from "./Login.style";
+import Screen from '../../components/screen/Screen';
+import { StyledLoginContainer, StyledLoginInputContainer } from './Login.style';
 
 interface LoginProps {}
 

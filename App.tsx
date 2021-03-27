@@ -8,12 +8,12 @@ import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
 import { useTheme } from "./src/common/theme/theme";
 
-export default function App() {
+export const App = (): JSX.Element => {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
   if (!isLoadingComplete) {
-    return null;
+    return <></>;
   } else {
     return (
       <ThemeProvider theme={useTheme}>
@@ -24,4 +24,4 @@ export default function App() {
       </ThemeProvider>
     );
   }
-}
+};

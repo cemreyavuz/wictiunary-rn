@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   TextInput as RNTextInput,
   TextInputProps as RNTextInputProps,
   useColorScheme,
   Text,
   View,
-} from "react-native";
+} from 'react-native';
 
-import colors from "../../constants/Colors";
-import createStyles from "./TextInput.style";
+import colors from '../../constants/Colors';
+import createStyles from './TextInput.style';
 
 interface TextInputProps extends RNTextInputProps {
   label: string;
@@ -28,7 +28,7 @@ const TextInput = (props: TextInputProps) => {
       <RNTextInput
         onChangeText={setText}
         // TODO: add default color scheme
-        selectionColor={colors[colorScheme ?? "light"].themedBackgroundPrimary}
+        selectionColor={colors[colorScheme ?? 'light'].themedBackgroundPrimary}
         style={styles.input}
         value={text}
         {...textInputProps}

@@ -1,6 +1,6 @@
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import styled from "../../common/theme/styled";
+import styled from '../../common/theme/styled';
 
 export const StyledScreenContainer = styled(SafeAreaView)`
   flex: 1;

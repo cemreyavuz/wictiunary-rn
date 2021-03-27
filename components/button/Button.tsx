@@ -1,8 +1,8 @@
-import React from "react";
-import { Text, TouchableHighlight, useColorScheme } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import React from 'react';
+import { Text, TouchableHighlight, useColorScheme } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import createStyles from "./Button.style";
+import createStyles from './Button.style';
 
 const BUTTON_ACTIVE_OPACITY = 0.85;
 

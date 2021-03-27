@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 import {
   StyledScreenContainer,
   StyledScreenContent,
   StyledScreenHeader,
   StyledScreenTitle,
-} from "./Screen.style";
+} from './Screen.style';
 
 interface ScreenProps {
   children: React.ReactNode;
