@@ -28,6 +28,10 @@ const Login = () => {
     }));
   };
 
+  const handlePress = (): void => {
+    console.log(fields);
+  };
+
   return (
     <Page isStatusBarFilled title="Login">
       <View style={styles.container}>
@@ -49,7 +53,7 @@ const Login = () => {
           />
         </View>
         <View style={styles.inputContainer}>
-          <Button text="Login" />
+          <Button onPress={handlePress} text="Login" />
         </View>
       </View>
     </Page>
