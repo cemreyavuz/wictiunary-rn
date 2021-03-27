@@ -6,7 +6,11 @@ import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function EditScreenInfo({
+  path,
+}: {
+  path: string;
+}): JSX.Element {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -39,7 +43,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making
+            Tap here if your app doesn{`'`}t automatically update after making
             changes
           </Text>
         </TouchableOpacity>

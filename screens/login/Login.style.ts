@@ -1,7 +1,6 @@
-import { ColorSchemeName, StyleSheet } from 'react-native';
-import colors from '../../constants/Colors';
+import { StyleSheet } from 'react-native';
 
-export default (colorScheme: ColorSchemeName) =>
+export default (): Record<string, unknown> =>
   StyleSheet.create({
     container: {
       height: '100%',

@@ -10,17 +10,13 @@ const {
   ThemeProvider,
   useTheme,
   withTheme,
-} = styledComponents as styledComponents.ReactNativeThemedStyledComponentsModule<
-  WictiunaryTheme,
-  object
->;
+} = (styledComponents as unknown) as styledComponents.ReactNativeThemedStyledComponentsModule<WictiunaryTheme>;
 
 export {
   css,
   isStyledComponent,
   ThemeConsumer,
   ThemeContext,
-  ThemeProvider,
   ThemeProvider,
   useTheme,
   withTheme,

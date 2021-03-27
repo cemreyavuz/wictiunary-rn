@@ -1,7 +1,9 @@
 import { ColorSchemeName, StyleSheet } from 'react-native';
 import colors from '../../constants/Colors';
 
-export default (colorScheme: ColorSchemeName) => {
+export default (
+  colorScheme: ColorSchemeName,
+): StyleSheet.NamedStyles<unknown> => {
   const themedColors = colors[colorScheme ?? 'light'];
 
   return StyleSheet.create({

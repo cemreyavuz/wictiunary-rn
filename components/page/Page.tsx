@@ -10,7 +10,7 @@ interface PageProps {
   title?: string;
 }
 
-const Page = (props: PageProps) => {
+const Page = (props: PageProps): JSX.Element => {
   const { children, isStatusBarFilled, title } = props;
 
   const colorScheme = useColorScheme();

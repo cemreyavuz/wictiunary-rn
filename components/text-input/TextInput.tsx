@@ -14,7 +14,7 @@ interface TextInputProps extends RNTextInputProps {
   label: string;
 }
 
-const TextInput = (props: TextInputProps) => {
+const TextInput = (props: TextInputProps): JSX.Element => {
   const { label, ...textInputProps } = props;
 
   const colorScheme = useColorScheme();

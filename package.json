@@ -9,6 +9,7 @@
     "test": "jest --watchAll",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "prettier": "prettier --check '*/**/*.{js,ts,tsx}'",
+    "tsc": "tsc",
     "check": "npm run lint"
   },
   "jest": {

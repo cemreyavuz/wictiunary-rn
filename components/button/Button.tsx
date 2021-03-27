@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableHighlight, useColorScheme } from 'react-native';
+import { Text, useColorScheme } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import createStyles from './Button.style';
@@ -11,7 +11,7 @@ interface ButtonProps {
   text: string;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = (props: ButtonProps): JSX.Element => {
   const { onPress, text } = props;
 
   const colorScheme = useColorScheme();

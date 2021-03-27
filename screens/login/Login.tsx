@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import Button from '../../components/button/Button';
 
 import Page from '../../components/page/Page';
@@ -12,7 +12,7 @@ interface LoginFields {
   password: string;
 }
 
-const Login = () => {
+const Login = (): JSX.Element => {
   const colorScheme = useColorScheme();
   const styles = createStyles(colorScheme);
 
@@ -21,7 +21,7 @@ const Login = () => {
     password: '',
   });
 
-  const handleFieldChange = (fieldName: string) => (value: any) => {
+  const handleFieldChange = (fieldName: string) => (value: string) => {
     setFields((prevFields) => ({
       ...prevFields,
       [fieldName]: value,

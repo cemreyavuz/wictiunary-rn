@@ -1,4 +1,3 @@
-import { DefaultTheme } from 'styled-components';
 import { colors } from './colors';
 
 const theme = {
@@ -12,8 +11,8 @@ const theme = {
   },
 };
 
-export interface WictiunaryTheme extends DefaultTheme {
-  colors: Record<keyof typeof theme.colors, string>;
+export interface WictiunaryTheme {
+  colors: { [key in keyof typeof theme.colors]: string };
 }
 
 export const useTheme = (): WictiunaryTheme => {
