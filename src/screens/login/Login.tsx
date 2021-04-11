@@ -1,14 +1,18 @@
 import React from 'react';
 
 import Screen from '../../components/screen/Screen';
-import { StyledLoginContainer, StyledLoginInputContainer } from './Login.style';
+import {
+  StyledLoginContainer,
+  StyledLoginInputContainer,
+  StyledTextInput,
+} from './Login.style';
 
 const Login = (): JSX.Element => {
   return (
     <Screen title="Login">
       <StyledLoginContainer>
-        <StyledLoginInputContainer>Input 1</StyledLoginInputContainer>
-        <StyledLoginInputContainer>Input 2</StyledLoginInputContainer>
+        <StyledTextInput />
+        <StyledLoginInputContainer>Input 3</StyledLoginInputContainer>
       </StyledLoginContainer>
     </Screen>
   );
