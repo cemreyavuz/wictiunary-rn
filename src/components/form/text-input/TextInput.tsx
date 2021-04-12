@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyledTextInput, StyledTextInputContainer } from './TextInput.style';
 
 interface TextInputProps {
+  onChangeText?: (text: string) => void;
   style?: Record<string, unknown>;
+  value?: string;
 }
 
 const TextInput = (props: TextInputProps): JSX.Element => {
-  const { style } = props;
-
-  const [text, setText] = useState('');
-
-  const handleTextChange = (updatedText: string): void => {
-    setText(updatedText);
-  };
+  const { onChangeText, style, value } = props;
 
   return (
     <StyledTextInputContainer style={style}>
-      <StyledTextInput onChangeText={handleTextChange} value={text} />
+      <StyledTextInput onChangeText={onChangeText} value={value} />
     </StyledTextInputContainer>
   );
 };
