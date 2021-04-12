@@ -1,6 +1,6 @@
-import { font, FontStyle } from '../../common/theme/mixins';
-import styled from '../../common/theme/styled';
-import TextInput from '../../components/form/text-input/TextInput';
+import { font, FontStyle } from '../../../common/theme/mixins';
+import styled from '../../../common/theme/styled';
+import TextInput from '../../../components/form/text-input/TextInput';
 
 export const StyledLoginContainer = styled.View`
   height: 100%;

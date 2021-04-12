@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Screen from '../../components/screen/Screen';
+import Screen from '../../../components/screen/Screen';
 import {
   StyledLoginContainer,
   StyledLoginInputContainer,
@@ -12,7 +12,7 @@ const Login = (): JSX.Element => {
     <Screen title="Login">
       <StyledLoginContainer>
         <StyledTextInput />
-        <StyledLoginInputContainer>Input 3</StyledLoginInputContainer>
+        <StyledLoginInputContainer>Input 2</StyledLoginInputContainer>
       </StyledLoginContainer>
     </Screen>
   );
