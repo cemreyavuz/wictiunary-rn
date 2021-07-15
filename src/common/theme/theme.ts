@@ -2,6 +2,7 @@ import { colors } from './colors';
 
 const theme = {
   colors: {
+    borderColorPrimary: colors.gray5,
     contentBackgroundColor: colors.white,
     headerBackgroundColor: colors.green4,
     textColorPrimary: colors.darkGray4,

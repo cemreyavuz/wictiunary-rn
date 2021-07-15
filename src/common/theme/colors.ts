@@ -1,9 +1,6 @@
 export type WictiunaryColor = keyof typeof colors;
 
 export const colors = {
-  tintColorLight: '#2f95dc',
-  tintColorDark: '#fff',
-
   green1: '#39A784',
   green2: '#49C19B',
   green3: '#61C9A8',

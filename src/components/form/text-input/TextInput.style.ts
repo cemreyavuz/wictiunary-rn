@@ -4,9 +4,9 @@ export const StyledTextInputContainer = styled.View``;
 
 export const StyledTextInput = styled.TextInput`
   height: 52px;
-  width: 100%;
 
   color: black;
 
-  border: 1px solid red;
+  border: 1px solid ${({ theme }) => theme.colors.borderColorPrimary};
+  border-radius: 4px;
 `;

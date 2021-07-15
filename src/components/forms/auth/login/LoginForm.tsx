@@ -1,9 +1,10 @@
 import React from 'react';
+import { Button } from 'react-native';
 
 import { useFormik } from 'formik';
-import { StyledLoginFormContainer } from './LoginForm.style';
+
 import TextInput from '../../../form/text-input/TextInput';
-import { Button } from 'react-native';
+import Form from '../../common/form/Form';
 
 interface LoginFormProps {}
 
@@ -19,10 +20,10 @@ const LoginForm = (props: LoginFormProps): JSX.Element => {
   });
 
   return (
-    <StyledLoginFormContainer>
+    <Form>
       <TextInput onChangeText={handleChange('email')} value={values['email']} />
       <Button onPress={handleSubmit} title="Submit" />
-    </StyledLoginFormContainer>
+    </Form>
   );
 };
 
