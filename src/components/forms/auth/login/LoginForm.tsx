@@ -21,7 +21,11 @@ const LoginForm = (props: LoginFormProps): JSX.Element => {
 
   return (
     <Form>
-      <TextInput onChangeText={handleChange('email')} value={values['email']} />
+      <TextInput
+        onChangeText={handleChange('email')}
+        placeholder="Enter your email" // TODO: add localization
+        value={values['email']}
+      />
       <Button onPress={handleSubmit} title="Submit" />
     </Form>
   );
