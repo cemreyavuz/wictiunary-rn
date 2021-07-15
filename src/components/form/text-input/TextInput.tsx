@@ -1,22 +1,27 @@
 import React from 'react';
+import { TextInputProps as RNTextInputProps } from 'react-native';
+
 import { StyledTextInput, StyledTextInputContainer } from './TextInput.style';
 
-interface TextInputProps {
+interface TextInputProps
+  extends Pick<
+    RNTextInputProps,
+    'autoCompleteType' | 'placeholder' | 'secureTextEntry'
+  > {
   onChangeText?: (text: string) => void;
-  placeholder?: string;
   style?: Record<string, unknown>;
   value?: string;
 }
 
 const TextInput = (props: TextInputProps): JSX.Element => {
-  const { onChangeText, placeholder, style, value } = props;
+  const { onChangeText, style, value, ...rnTextInputProps } = props;
 
   return (
     <StyledTextInputContainer style={style}>
       <StyledTextInput
-        placeholder={placeholder}
         onChangeText={onChangeText}
         value={value}
+        {...rnTextInputProps}
       />
     </StyledTextInputContainer>
   );
