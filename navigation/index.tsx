@@ -9,9 +9,11 @@ import { ColorSchemeName } from 'react-native';
 
 // import Login from "../screens/login/Login";
 import NotFoundScreen from '../screens/NotFoundScreen';
-import Login from '../src/screens/auth/login/Login';
 import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+
+import Login from '../src/screens/auth/login/Login';
+import Home from '../src/screens/home/Home';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -41,6 +43,7 @@ function RootNavigator() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
