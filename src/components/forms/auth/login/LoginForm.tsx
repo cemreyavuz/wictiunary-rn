@@ -6,17 +6,24 @@ import { useFormik } from 'formik';
 import TextInput from '../../../form/text-input/TextInput';
 import Form from '../../common/form/Form';
 
-interface LoginFormProps {}
+export interface LoginFormValues {
+  email: string;
+  password: string;
+}
+
+interface LoginFormProps {
+  onSubmit?: (values: LoginFormValues) => void;
+}
 
 const LoginForm = (props: LoginFormProps): JSX.Element => {
-  const { handleChange, handleSubmit, values } = useFormik({
+  const { onSubmit } = props;
+
+  const { handleChange, handleSubmit, values } = useFormik<LoginFormValues>({
     initialValues: {
       email: '',
       password: '',
     },
-    onSubmit: (values) => {
-      console.log(values);
-    },
+    onSubmit: (values) => onSubmit?.(values),
   });
 
   return (
@@ -34,7 +41,7 @@ const LoginForm = (props: LoginFormProps): JSX.Element => {
         secureTextEntry
         value={values['password']}
       />
-      <Button onPress={handleSubmit} title="Submit" />
+      <Button onPress={() => handleSubmit()} title="Submit" />
     </Form>
   );
 };
