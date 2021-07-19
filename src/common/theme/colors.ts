@@ -32,4 +32,10 @@ export const colors = {
   vermilion3: '#F96E46',
   vermilion4: '#F85325',
   vermilion5: '#ED3907',
+
+  orange1: '#ED3907',
+  orange2: '#F85325',
+  orange3: '#F96E46',
+  orange4: '#FB9274',
+  orange5: '#FCB19C',
 };

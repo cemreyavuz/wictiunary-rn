@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from 'react-native';
 
 import { useFormik } from 'formik';
 
-import TextInput from '../../../form/text-input/TextInput';
 import Form from '../../common/form/Form';
+import Button from '../../../button/Button';
+import TextInput from '../../../form/text-input/TextInput';
 
 export interface LoginFormValues {
   email: string;
@@ -41,7 +41,10 @@ const LoginForm = (props: LoginFormProps): JSX.Element => {
         secureTextEntry
         value={values['password']}
       />
-      <Button onPress={() => handleSubmit()} title="Submit" />
+      <Button
+        content="LOGIN" // TODO: add localization
+        onPress={() => handleSubmit()}
+      />
     </Form>
   );
 };
