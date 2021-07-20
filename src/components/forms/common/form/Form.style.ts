@@ -1,9 +1,9 @@
 import styled from '../../../../common/theme/styled';
 
 export const StyledFormContainer = styled.View`
-  padding: 24px;
+  padding: 24px 16px;
 `;
 
 export const StyledFormItemContainer = styled.View<{ $isLastChild?: boolean }>`
-  margin-bottom: 24px;
+  ${({ $isLastChild }) => !$isLastChild && 'margin-bottom: 24px;'}
 `;

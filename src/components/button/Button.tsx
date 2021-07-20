@@ -4,7 +4,7 @@ import { TouchableOpacityProps as RNTouchableOpacityProps } from 'react-native';
 
 import { StyledButtonContainer, StyledButtonContent } from './Button.style';
 
-const BUTTON_ACTIVE_OPACITY = 0.8;
+export const BUTTON_ACTIVE_OPACITY = 0.8;
 
 interface ButtonProps extends RNTouchableOpacityProps {
   content?: React.ReactNode;
