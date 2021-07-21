@@ -10,7 +10,8 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "prettier": "prettier --check '*/**/*.{js,ts,tsx}'",
     "tsc": "tsc",
-    "check": "npm run lint"
+    "check": "npm run lint",
+    "generate-api": "java -jar codegen/swagger-codegen-cli-3.0.27.jar generate -i src/common/api/definition/api.yaml -l typescript-fetch -o src/common/api/generated/ && rm -rf src/common/api/generated/.swagger-codegen src/common/api/generated/.gitignore src/common/api/generated/.swagger-codegen-ignore src/common/api/generated/api_test.spec.ts src/common/api/generated/git_push.sh"
   },
   "jest": {
     "preset": "jest-expo"

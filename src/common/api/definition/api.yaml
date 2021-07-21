@@ -1,0 +1,96 @@
+openapi: 3.0.27
+
+tags:
+- name: Auth
+  description: Auth API
+
+paths:
+  # [POST] Sign Up
+  /auth/signup:
+    post:
+      tags:
+      - Auth
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/AuthData'
+      responses:
+        201:
+          schema:
+            $ref: '#/definitions/UserData'
+  # [POST] Login
+  /auth/login:
+    post:
+      tags:
+      - Auth
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/AuthData'
+      responses:
+        200:
+          schema:
+            $ref: '#/definitions/UserData'
+  # [POST] Logout
+  /auth/logout:
+    post:
+      tags:
+      - Auth
+      responses:
+        200:
+          schema:
+            $ref: '#/definitions/UserData'
+  # [POST] Me
+  /auth/me:
+    get:
+      tags:
+      - Auth
+      responses:
+        200:
+          schema:
+            $ref: '#/definitions/UserData'
+
+# definitions
+definitions:
+  AuthData:
+    type: object
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        description: User's email
+      password:
+        type: string
+        description: User's password
+  UserData:
+    type: object
+    required:
+      - data
+    properties:
+      data:
+        type: object
+        required:
+            - _id
+            - email
+            - password
+        properties:
+          _id:
+            type: string
+            description: User's ID
+          email:
+            type: string
+            description: User's Email
+          password:
+            type: string
+            description: User's Password
+      message:
+        type: string
+
+schemes:
+ - http
