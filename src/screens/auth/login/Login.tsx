@@ -2,11 +2,12 @@ import React from 'react';
 
 import { StackNavigationProp } from '@react-navigation/stack';
 
-import { RootStackParamList } from '../../../../types';
 import LoginForm, {
   LoginFormValues,
 } from '../../../components/forms/auth/login/LoginForm';
 import Screen from '../../../components/screen/Screen';
+import { BUTTON_ACTIVE_OPACITY } from '../../../components/button/Button';
+import { RootStackParamList } from '../../../../types';
 
 import {
   StyledLoginContainer,
@@ -14,7 +15,6 @@ import {
   StyledNavigateToRegisterPageButtonContainer,
   StyledNavigateToRegisterPageButtonContent,
 } from './Login.style';
-import { BUTTON_ACTIVE_OPACITY } from '../../../components/button/Button';
 
 interface LoginProps {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -25,16 +25,17 @@ const Login = (props: LoginProps): JSX.Element => {
 
   const handleSubmit = (values: LoginFormValues): void => {
     console.log(values);
-    navigation.push('Home');
+    navigation.replace('Home');
   };
 
   const navigateToRegisterPage = (): void => {
-    // TODO: comment out when register page is implemented
-    // navigation.push('Register');
+    navigation.push('Register');
   };
 
   return (
-    <Screen title="Login">
+    <Screen
+      title="Login" // TODO: add localization
+    >
       <StyledLoginContainer>
         <LoginForm onSubmit={handleSubmit} />
         <StyledNavigateToRegisterPageButtonContainer>
