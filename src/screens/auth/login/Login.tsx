@@ -8,6 +8,7 @@ import LoginForm, {
 import Screen from '../../../components/screen/Screen';
 import { BUTTON_ACTIVE_OPACITY } from '../../../components/button/Button';
 import { RootStackParamList } from '../../../../types';
+import { useAppDispatch } from '../../../state/store/hooks';
 
 import {
   StyledLoginContainer,
@@ -15,6 +16,7 @@ import {
   StyledNavigateToRegisterPageButtonContainer,
   StyledNavigateToRegisterPageButtonContent,
 } from './Login.style';
+import { login } from '../../../state/slices/authSlice';
 
 interface LoginProps {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -23,9 +25,20 @@ interface LoginProps {
 const Login = (props: LoginProps): JSX.Element => {
   const { navigation } = props;
 
+  const dispatch = useAppDispatch();
+
   const handleSubmit = (values: LoginFormValues): void => {
-    console.log(values);
-    navigation.replace('Home');
+    const { email, password } = values;
+
+    dispatch(login({ email, password }))
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    navigation.push('Home');
   };
 
   const navigateToRegisterPage = (): void => {
