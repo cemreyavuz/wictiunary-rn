@@ -6,7 +6,7 @@ import { StyledHomeContainer, StyledHomeText } from './Home.style';
 
 const Home = (): JSX.Element => {
   return (
-    <Screen title="Home">
+    <Screen isHeaderHidden>
       <StyledHomeContainer>
         <StyledHomeText>Home</StyledHomeText>
       </StyledHomeContainer>

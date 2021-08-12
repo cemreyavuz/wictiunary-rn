@@ -9,17 +9,20 @@ import {
 
 interface ScreenProps {
   children: React.ReactNode;
-  title: string;
+  isHeaderHidden?: boolean;
+  title?: string;
 }
 
 const Screen = (props: ScreenProps): JSX.Element => {
-  const { children, title } = props;
+  const { children, isHeaderHidden, title } = props;
 
   return (
     <StyledScreenContainer>
-      <StyledScreenHeader>
-        <StyledScreenTitle>{title}</StyledScreenTitle>
-      </StyledScreenHeader>
+      {!isHeaderHidden && (
+        <StyledScreenHeader>
+          <StyledScreenTitle>{title}</StyledScreenTitle>
+        </StyledScreenHeader>
+      )}
       <StyledScreenContent>{children}</StyledScreenContent>
     </StyledScreenContainer>
   );
