@@ -30,14 +30,9 @@ const Login = (props: LoginProps): JSX.Element => {
   const handleSubmit = (values: LoginFormValues): void => {
     const { email, password } = values;
 
-    dispatch(login({ email, password }))
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    dispatch(login({ email, password }));
 
+    // TODO: make this dependent to response
     navigation.push('Home');
   };
 
